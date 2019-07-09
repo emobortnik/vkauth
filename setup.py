@@ -1,60 +1,34 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-from io import open
-from setuptools import setup
-
-"""
-:authors: python273
-:license: Apache License, Version 2.0, see LICENSE file
-:copyright: (c) 2019 python273
-"""
+import os
+from setuptools import setup, find_packages
 
 
-version = '1'
+def read(filename):
+    return open(os.path.join(os.path.dirname(__file__), filename)).read()
 
-with open('README.md', encoding='utf-8') as f:
-    long_description = f.read()
 
 setup(
     name='vkauth',
-    version=version,
-
-    author='python273',
-    author_email='vk_api@python273.pw',
-
-    description=(
-        u'Python модуль для написания скриптов для социальной сети '
-        u'Вконтакте (vk.com) (API wrapper)'
-    ),
-    long_description=long_description,
-    long_description_content_type='text/markdown',
-
-#    url='https://github.com/python273/vk_api',
-#    download_url='https://github.com/python273/vk_api/archive/v{}.zip'.format(
-#        version
-#   ),
-
-    license='Apache License, Version 2.0, see LICENSE file',
-
-#    packages=['requests', 'getpass'],
-#    install_requires=['requests', 'enum34;python_version<"3.4"', 'six'],
-#    extras_require={
-#        'vkstreaming': ['websocket-client'],
-#        'vkaudio': ['beautifulsoup4'],
-    },
-
+    version='1',
+    license='ISC',
+    description='Python package for authorize and get'
+                'access_token for vkontakte api.',
+    keywords='vkontakte vk api access_token oauth oauth2',
+    #long_description=read('README.rst') + read('CHANGES.rst'),
+    #url='https://github.com/saippuakauppias/pyvka',
+    #author='Denis Veselov',
+   # author_email='progr.mail@gmail.com',
+    include_package_data=True,
+    packages=find_packages(),
+    install_requires=[
+        'requests'
+    ],
     classifiers=[
-        'License :: OSI Approved :: Apache Software License',
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: ISC License (ISCL)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: Implementation :: PyPy',
-        'Programming Language :: Python :: Implementation :: CPython',
-    ]
-)
+        'Topic :: Internet :: WWW/HTTP',
+    ],
