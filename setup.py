@@ -38,9 +38,9 @@ setup(
 
 #    packages=['requests', 'getpass'],
     install_requires=['requests', 'enum34;python_version<"3.4"', 'six', 'getpass'],
-    extras_require={
-        'vkstreaming': ['websocket-client'],
-        'vkaudio': ['beautifulsoup4'],
+#    extras_require={
+#        'vkstreaming': ['websocket-client'],
+#        'vkaudio': ['beautifulsoup4'],
     },
 
     classifiers=[
