@@ -29,8 +29,8 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
 
-    url='https://github.com/python273/vk_api',
-    download_url='https://github.com/python273/vk_api/archive/v{}.zip'.format(
+#    url='https://github.com/python273/vk_api',
+#    download_url='https://github.com/python273/vk_api/archive/v{}.zip'.format(
         version
     ),
 
